@@ -1,0 +1,9 @@
+<p> all posts </p>
+<hr>
+<% @blogs.each do |blog| %>
+<h1><%= blog.title %></h1>
+<h4>by <%= blog.user.email %> on <%= blog.date %></h4>
+<p><%= blog.body %></p>
+<hr>
+<%= link_to "See Comments", blog_path(blog) %>
+<% end %>
